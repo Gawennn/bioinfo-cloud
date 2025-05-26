@@ -6,9 +6,9 @@ spring:
     name: bioinfo-cloud
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/bioinfo_platform?useSSL=false&serverTimezone=UTC
-    username: root
-    password: 12345678
+    url: 
+    username: 
+    password: 
   redis:
     host: 127.0.0.1
     port: 6379
@@ -22,15 +22,15 @@ spring:
   mail:
     host: smtp.qq.com
     port: 587
-    username: 1826875207@qq.com
-    password: utedfitwiabbejga # 授权码
+    username: 
+    password:  # 授权码
     properties:
       mail:
         smtp:
           auth: true  # 启用身份验证，表示连接到邮件服务器时需要身份验证。
           starttls:
             enable: true  # 启用 STARTTLS。STARTTLS 是一种用于在邮件传输中加密通信的协议。如果设置为 `true`，客户端将使用加密连接与邮件服务器通信。
-      from: 1826875207@qq.com  # 默认的发件人邮箱地址。当你发送邮件时，如果没有显式指定发件人地址，Spring Boot 会使用此邮箱地址作为发件人。
+      from:   # 默认的发件人邮箱地址。当你发送邮件时，如果没有显式指定发件人地址，Spring Boot 会使用此邮箱地址作为发件人。
 
 mybatis:
   type-aliases-package: com.bioinfo.entity
