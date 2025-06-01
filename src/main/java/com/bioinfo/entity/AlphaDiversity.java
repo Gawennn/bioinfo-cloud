@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
  */
 @Data
 @Entity
-@Table(name = "alpha_diversity")
+@Table(name = "alpha_result")
 public class AlphaDiversity {
 
     @Id
