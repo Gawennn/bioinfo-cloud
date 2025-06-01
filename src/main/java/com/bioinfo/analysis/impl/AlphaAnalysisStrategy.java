@@ -46,6 +46,7 @@ public class AlphaAnalysisStrategy implements AnalysisStrategy {
 
         List<Map<String, String>> resultData;
         try (InputStream resultStream = Files.newInputStream(resultPath)) {
+            // 使用EasyExcel读结果数据
             resultData = EasyExcelUtils.readDynamicExcel(resultStream);
         }
 

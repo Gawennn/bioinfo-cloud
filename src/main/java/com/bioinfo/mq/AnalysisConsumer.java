@@ -43,17 +43,11 @@ import java.util.stream.Collectors;
 @RocketMQMessageListener(topic = "analysis-task-topic", consumerGroup = "analysis-consumer-group")
 public class AnalysisConsumer implements RocketMQListener<String> {
 
-    // 结果保存的路径
-    private final String resultDir = "results"; //当前根路径下的 /results
-
     @Autowired
     private TaskMapper taskMapper;
 
     @Autowired
     private AnalysisStrategyFactory strategyFactory;
-
-    @Autowired
-    private AlphaAnalysisMapper alphaAnalysisMapper;
 
     @Autowired
     private RocketMQTemplate rocketMQTemplate;
