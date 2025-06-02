@@ -21,7 +21,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         if (UserHolder.getUser() == null) {
             // 没有，需要拦截，设置状态码
             response.setStatus(401);
-            response.getWriter().write("Authorization header missing");
+            response.getWriter().write("请先登陆！");
             return false;
         }
         // 有用户，放行

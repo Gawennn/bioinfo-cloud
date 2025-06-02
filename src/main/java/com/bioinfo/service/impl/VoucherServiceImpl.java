@@ -77,7 +77,7 @@ public class VoucherServiceImpl implements VoucherService {
     // 线程池创建子线程，处理订单
     private static final ExecutorService SECKILL_ORDER_EXECUTOR = Executors.newSingleThreadExecutor(r -> new Thread(r, "order-handler"));
 
-        @PostConstruct // 表示在该类一初始化好就开始执行
+    @PostConstruct // 表示在该类一初始化好就开始执行
     private void init() {
         SECKILL_ORDER_EXECUTOR.submit(new VoucherOrderHandler());
     }

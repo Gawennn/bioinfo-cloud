@@ -35,7 +35,9 @@ public class MailService {
         helper.setSubject(subject);
         helper.setText(text);
         FileSystemResource file = new FileSystemResource(attachment);
-        helper.addAttachment(file.getFilename(), file);
+        if (file.getFilename() != null) {
+            helper.addAttachment(file.getFilename(), file);
+        }
         mailSender.send(message);
     }
 }
